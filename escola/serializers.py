@@ -8,7 +8,7 @@ class EstudanteSerializer(serializers.ModelSerializer):
         fields = ['id', 'nome', 'email', 'cpf', 'data_nascimento', 'celular']
 
 
-class CursoSerializer(serializers.ModelField):
+class CursoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Curso
         fields = '__all__'
