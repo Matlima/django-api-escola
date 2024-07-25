@@ -15,6 +15,9 @@ class EstudanteViewSet(viewsets.ModelViewSet):
     # Configurando filtro de back-end
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
     ordering_fields = ['nome']
+    # Adicionando filtros:
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['nome', 'cpf']
 
 
 class CursoViewSet(viewsets.ModelViewSet):
