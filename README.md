@@ -17,36 +17,38 @@ Abaixo estão listados os principais pontos implementados, os endpoints disponí
 
 ## Endpoints Disponíveis
 
-### Autenticação
-
-- **`POST /estudantes/`**: Endpoint para cadastrar estudante.
-- **`GET /estudantes/`**: Endpoint para os registros de estudantes.
-- **`POST /cursos/`**: Endpoint para cadastrar cursos.
-- **`GET /cursos/`**: Endpoint para os registros de cursos
-
 ### estudantes
 
-- **`GET /api/estudante/`**: Lista todos os estudantess.
-- **`GET /api/estudante/{id}/`**: Detalhes de um estudantes específico.
-- **`POST /api/estudante/`**: Cria um novo estudantes.
-- **`PUT /api/estudante/{id}/`**: Atualiza um estudantes específico.
-- **`DELETE /api/estudante/{id}/`**: Exclui um estudantes específico.
+- **`GET /estudante/`**: Lista todos os estudantess.
+- **`GET /estudante/{id}/`**: Detalhes de um estudantes específico.
+- **`GET /estudante/{id}/matriculas`**: Detalhes de todas as matriculas um estudantes específico.
+- **`POST /estudante/`**: Cria um novo estudantes.
+- **`PUT /estudante/{id}/`**: Atualiza um estudantes específico.
+- **`DELETE /estudante/{id}/`**: Exclui um estudantes específico.
 
 ### Cursos (exemplo de entidade)
 
-- **`GET /api/cursos/`**: Lista todos os Cursos.
-- **`GET /api/cursos/{id}/`**: Detalhes de um produto específico.
-- **`POST /api/cursos/`**: Cria um novo produto.
-- **`PUT /api/cursos/{id}/`**: Atualiza um produto específico.
-- **`DELETE /api/cursos/{id}/`**: Exclui um produto específico.
+- **`GET /cursos/`**: Lista todos os Cursos.
+- **`GET /cursos/{id}/`**: Detalhes de um curso específico.
+- **`GET /cursos/{id}/matriculas`**: Detalhes de todas as matriculas no curso específico.
+- **`POST /cursos/`**: Cria um novo curso.
+- **`PUT /cursos/{id}/`**: Atualiza um curso específico.
+- **`DELETE /cursos/{id}/`**: Exclui um curso específico.
+
+  ### Matricula (exemplo de entidade)
+
+- **`GET /matricula/`**: Lista todas as Matriculas.
+- **`GET /matricula/{id}/`**: Detalhes de uma matricula específica.
+- **`POST /matricula/`**: Cria uma nova matricula.
+- **`PUT /matricula/{id}/`**: Atualiza uma matricula específica.
+- **`DELETE /matricula/{id}/`**: Exclui uma matricula específica.
 
 ## Ferramentas Utilizadas
 
 - **Django**: Framework web de alto nível para o desenvolvimento rápido de aplicações web.
 - **Django REST Framework**: Toolkit poderoso e flexível para construir APIs web.
-- **Django REST Framework SimpleJWT**: Implementação de JWT para autenticação.
-- **PostgreSQL**: Sistema de gerenciamento de banco de dados relacional utilizado no backend.
-- **Docker**: Plataforma para desenvolver, enviar e executar aplicações em containers.
+- **Django REST Framework Basic Authentication**: Implementação de Basic Authentication para autenticação.
+- **SQLite**: Sistema de gerenciamento de banco de dados relacional utilizado no backend.
 - **Swagger**: Ferramenta para gerar documentação interativa da API.
 - **Redoc**: Ferramenta para gerar documentação estática e amigável da API.
 - **GitHub Actions**: Para integração e entrega contínua (CI/CD).
