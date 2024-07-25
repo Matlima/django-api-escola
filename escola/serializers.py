@@ -7,6 +7,7 @@ class EstudanteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Estudante
         fields = ['id', 'nome', 'email', 'cpf', 'data_nascimento', 'celular']
+
     # Validação geral:
     def validate(self, dados):
         if cpf_invalido(dados['cpf']):
@@ -43,3 +44,10 @@ class ListaMatriculasCursoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Matricula
         fields = ['estudante']
+
+
+class EstudanteSerializerV2(serializers.ModelSerializer):
+    class Meta:
+        model = Estudante
+        fields = ['id', 'nome', 'email', 'celular']
+        

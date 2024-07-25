@@ -1,5 +1,5 @@
 from escola.models import Estudante, Curso, Matricula
-from escola.serializers import EstudanteSerializer, CursoSerializer, MatriculaSerializer, ListaMatriculasCursoSerializer, ListaMatriculasEstudanteSerializer
+from escola.serializers import EstudanteSerializer, CursoSerializer, MatriculaSerializer, ListaMatriculasCursoSerializer, ListaMatriculasEstudanteSerializer, EstudanteSerializerV2
 from rest_framework import viewsets, generics, filters
 # Caso queira adicionar apenas em um view
 # from rest_framework.authentication import BasicAuthentication
@@ -11,13 +11,18 @@ class EstudanteViewSet(viewsets.ModelViewSet):
     # authentication_classes = [BasicAuthentication]
     # permission_classes = [IsAuthenticated]
     queryset = Estudante.objects.all()
-    serializer_class = EstudanteSerializer
+    # serializer_class = EstudanteSerializer
     # Configurando filtro de back-end
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
     ordering_fields = ['nome']
     # Adicionando filtros:
     filter_backends = [filters.SearchFilter]
     search_fields = ['nome', 'cpf']
+    # Aplicando versionamento da API, comenta o de cima para tirar e não usar
+    def get_serializer_class(self):
+        if self.request.version == 'v2':
+            return EstudanteSerializerV2
+        return EstudanteSerializer
 
 
 class CursoViewSet(viewsets.ModelViewSet):
