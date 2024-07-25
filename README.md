@@ -35,7 +35,7 @@ Abaixo estão listados os principais pontos implementados, os endpoints disponí
 - **`PUT /cursos/{id}/`**: Atualiza um curso específico.
 - **`DELETE /cursos/{id}/`**: Exclui um curso específico.
 
-  ### Matricula (exemplo de entidade)
+### Matricula (exemplo de entidade)
 
 - **`GET /matricula/`**: Lista todas as Matriculas.
 - **`GET /matricula/{id}/`**: Detalhes de uma matricula específica.
