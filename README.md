@@ -17,7 +17,7 @@ Abaixo estão listados os principais pontos implementados, os endpoints disponí
 
 ## Endpoints Disponíveis
 
-### estudantes
+### Estudantes (exemplo de entidade)
 
 - **`GET /estudante/`**: Lista todos os estudantess.
 - **`GET /estudante/{id}/`**: Detalhes de um estudantes específico.
