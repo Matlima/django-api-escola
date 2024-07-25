@@ -1,4 +1,4 @@
-# Django REST Framework Application
+# Django REST Framework Application: Escola
 
 ## Descrição
 
@@ -55,14 +55,44 @@ Abaixo estão listados os principais pontos implementados, os endpoints disponí
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/sua-aplicacao.git
+   git clone https://github.com/Matlima/django-api-escola
    cd sua-aplicacao
    ```
+   
+2. Configure o ambiente virtual:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
+   ```
 
+3. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Configure as variáveis de ambiente:
+Crie um arquivo .env na raiz do projeto e adicione as variáveis necessárias, como configurações do banco de dados e chave secreta do Django.
+
+5. Aplique as migrações do banco de dados:
+   ```bash
+   python manage.py migrate
+   ```
+
+6. Execute a aplicação:
+   ```bash
+   python manage.py runserver
+   ```
+
+## Uso
+Após iniciar o servidor, a API estará disponível em http://127.0.0.1:8000/. Utilize ferramentas como Postman ou cURL para interagir com os endpoints da API.
 
 ## Contribuição
 - Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorias e correções.
 
 ## Licença
 - Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+***
+
+Feito com ❤️ por Matheus Lima
 
